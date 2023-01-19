@@ -19,7 +19,7 @@ namespace SuperHeroAPI.Controllers
         #endregion
 
         #region MetodoGET
-        [HttpGet]
+        [HttpGet("Get")]
         public async Task<ActionResult<List<SuperHero>>> Get()
         {
             //Não esta retornando todos os dados
@@ -28,7 +28,7 @@ namespace SuperHeroAPI.Controllers
         #endregion
 
         #region MetodoGETComID
-        [HttpGet("{id}")]
+        [HttpGet("GetId")]
         public async Task<ActionResult<List<SuperHero>>> Get(int id)
         {
             //Faz a busca somente com o ID
@@ -43,7 +43,7 @@ namespace SuperHeroAPI.Controllers
         #endregion
 
         #region MetodoPOST
-        [HttpPost]
+        [HttpPost("Cadastrar")]
         public async Task<ActionResult<List<SuperHero>>> AddHero(SuperHero hero)
         {
             //Adicionando um novo registro
@@ -58,7 +58,7 @@ namespace SuperHeroAPI.Controllers
 
         #region MetodoPUT
         //Editando os valores 
-        [HttpPut]
+        [HttpPut("Editar")]
         public async Task<ActionResult<List<SuperHero>>> UpdateHero(SuperHero request)
         {
             //Faz a busca somente com o ID
@@ -84,7 +84,7 @@ namespace SuperHeroAPI.Controllers
         #endregion
 
         #region MetodoDelete
-        [HttpDelete("{id}")]
+        [HttpDelete("Deletar")]
         public async Task<ActionResult<List<SuperHero>>> Delete(int id)
         {
             //Faz a busca somente com o ID
